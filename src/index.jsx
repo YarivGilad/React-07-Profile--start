@@ -1,7 +1,12 @@
 import * as ReactDOMClient from "react-dom/client";
 import { App } from "./view/app";
-import "./styles/global.styles.css";
+import {GlobalStyles} from "./styles/global.reset.js";
 
 const container = document.querySelector("#root");
 const root = ReactDOMClient.createRoot(container);
-root.render(<App />);
+root.render(
+  <>
+    <App />
+    <GlobalStyles />
+  </>
+);
